@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 
 test.describe('Main page', () => {
-  test('should exist all links', async ({ page }) => {
+  test('Match snapshots on the Main page', async ({ page }) => {
     await page.goto('/')
     expect(await page.screenshot()).toMatchSnapshot()
     

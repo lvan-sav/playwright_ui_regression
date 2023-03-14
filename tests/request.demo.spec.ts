@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 
 test.describe('Request about Demo page', () => {
-    test('Fields are displayed', async ({ page }) => {
+    test('Match snapshots on the Request about Demo page', async ({ page }) => {
       await page.goto('/request-a-demo/')
 
       const video = page.locator('.shadow-box .video-placeholer')
