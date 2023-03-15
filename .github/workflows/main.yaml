@@ -32,14 +32,12 @@ jobs:
         name: playwright-report
         path: playwright-report
     
-    - name: Commit snapshots
-      if: 
-      env: 
-        CI_COMMIT_MESSAGE: Snapshots
-      run: |
-        git add tests
-        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-        git push
+    - name: Push snapshots
+      if: always()
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Add snapshots
+        file_pattern: 'tests/*'
     
     - name: Deploy report
       uses: JamesIves/github-pages-deploy-action@v4
