@@ -4,7 +4,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Request about Demo page', () => {
     test('Match snapshots on the Request about Demo page', async ({ page }) => {
       await page.goto('/request-a-demo/')
-      await page.waitForLoadState('networkidle')
+      await page.waitForTimeout(2000)
 
       const video = page.locator('.shadow-box .video-placeholer')
 
