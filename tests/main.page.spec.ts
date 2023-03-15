@@ -1,40 +1,38 @@
 import { test, expect } from '@playwright/test';
+import { MainPage } from '../pages/main.page'
 
 
 test.describe('Main page', () => {
   test('Match snapshots on the Main page', async ({ page }) => {
+    const mainPage = new MainPage(page)
+
     await page.goto('/')
     await page.waitForTimeout(2000)
     expect(await page.screenshot()).toMatchSnapshot()
     
-    const wantErmBtn = page.locator('.button[href*="/enterprise-risk-management/"]')
-    await wantErmBtn.scrollIntoViewIfNeeded()
+    await mainPage.wantErmBtn.scrollIntoViewIfNeeded()
     await page.waitForTimeout(2000)
-    await expect(wantErmBtn).toBeInViewport()
+    await expect(mainPage.wantErmBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    const wantAutoBtn = page.locator('.button[href*="/third-party-risk-management/"]')
-    await wantAutoBtn.scrollIntoViewIfNeeded()
+    await mainPage.wantAutoBtn.scrollIntoViewIfNeeded()
     await page.waitForTimeout(2000)
-    expect(wantAutoBtn).toBeInViewport()
+    expect(mainPage.wantAutoBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    const firstArticle = page.locator('article.it-security-risk')
-    await firstArticle.scrollIntoViewIfNeeded()
+    await mainPage.firstArticle.scrollIntoViewIfNeeded()
     await page.waitForTimeout(2000)
-    expect(firstArticle).toBeInViewport()
+    expect(mainPage.firstArticle).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    const signUpBtn = page.locator('section#form')
-    await signUpBtn.scrollIntoViewIfNeeded()
+    await mainPage.signUpBtn.scrollIntoViewIfNeeded()
     await page.waitForTimeout(2000)
-    expect(signUpBtn).toBeInViewport()
+    expect(mainPage.signUpBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    const reqDemoFooterBtn = page.locator('.bluedeep[href*="request-a-demo"]')
-    await reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await mainPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
     await page.waitForTimeout(2000)
-    expect(reqDemoFooterBtn).toBeInViewport()
+    expect(mainPage.reqDemoFooterBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 })
