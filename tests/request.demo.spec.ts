@@ -14,11 +14,11 @@ test.describe('Request about Demo page', () => {
       const sectionHeader = page.locator('section.review-module br')
       
       await sectionHeader.scrollIntoViewIfNeeded()
-      await page.waitForLoadState('networkidle')
+      await page.waitForTimeout(2000)
       expect(await page.screenshot()).toMatchSnapshot()
 
       await page.mouse.wheel(0, 4000)
-      await page.waitForLoadState('networkidle')
+      await page.waitForTimeout(2000)
       const reqDemoBtn = page.locator('#menu-footer-menu.menu')
 
       await expect(reqDemoBtn).toBeInViewport()

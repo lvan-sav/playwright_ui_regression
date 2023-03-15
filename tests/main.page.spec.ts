@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 
 test.describe('Main page', () => {
-  test.only('Match snapshots on the Main page', async ({ page }) => {
+  test('Match snapshots on the Main page', async ({ page }) => {
     await page.goto('/')
     await page.waitForTimeout(2000)
     expect(await page.screenshot()).toMatchSnapshot()
