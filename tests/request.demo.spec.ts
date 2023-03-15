@@ -1,27 +1,25 @@
 import { test, expect } from '@playwright/test';
+import { ReqDemoPage } from '../pages/request.demo.page';
 
 
 test.describe('Request about Demo page', () => {
     test('Match snapshots on the Request about Demo page', async ({ page }) => {
-      await page.goto('/request-a-demo/')
-      await page.waitForTimeout(2000)
-
-      const video = page.locator('.shadow-box .video-placeholer')
-
-      await expect(video).toBeInViewport()
-      expect(await page.screenshot()).toMatchSnapshot()
-
-      const sectionHeader = page.locator('section.review-module br')
+      const reqDemoPage = new ReqDemoPage(page)
       
-      await sectionHeader.scrollIntoViewIfNeeded()
+      await reqDemoPage.goto()
+      await page.waitForTimeout(2000)
+
+      await expect(reqDemoPage.video).toBeInViewport()
+      expect(await page.screenshot()).toMatchSnapshot()
+
+      await reqDemoPage.sectionHeader.scrollIntoViewIfNeeded()
       await page.waitForTimeout(2000)
       expect(await page.screenshot()).toMatchSnapshot()
 
-      await page.mouse.wheel(0, 4000)
+      await reqDemoPage.scroll4000Px()
       await page.waitForTimeout(2000)
-      const reqDemoBtn = page.locator('#menu-footer-menu.menu')
 
-      await expect(reqDemoBtn).toBeInViewport()
+      await expect(reqDemoPage.reqDemoBtn).toBeInViewport()
       expect(await page.screenshot()).toMatchSnapshot()
     })
 })

@@ -17,7 +17,7 @@ test.describe('Platform dropdown pages', () => {
     }
   })
 
-  test.only('Match snapshots on the Features page', async ({ page }) => {
+  test('Match snapshots on the Features page', async ({ page }) => {
     const platformPage = new PlatformPage(page)
 
     await platformPage.goto('features')
