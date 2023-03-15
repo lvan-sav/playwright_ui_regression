@@ -23,7 +23,7 @@ jobs:
       run: npm run pw:install
     
     - name: Run tests
-      run: npx playwright test --config=config/playwright.config.ts --upload-snapshots
+      run: npx playwright test --config=config/playwright.config.ts --update-snapshots
     
     - name: Upload report
       if: always()
