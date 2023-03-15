@@ -23,7 +23,7 @@ jobs:
       run: npm run pw:install
     
     - name: Run tests
-      run: npx playwright test --config=config/playwright.config.ts --update-snapshots
+      run: npm run pw:test
     
     - name: Upload report
       if: always()
@@ -31,13 +31,6 @@ jobs:
       with: 
         name: playwright-report
         path: playwright-report
-    
-    - name: Push snapshots
-      if: always()
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: Add snapshots
-        file_pattern: 'tests/*'
     
     - name: Deploy report
       uses: JamesIves/github-pages-deploy-action@v4
