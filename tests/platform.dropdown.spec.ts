@@ -105,12 +105,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('exchange')
-    await page.waitForTimeout(3000)
+    await await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })

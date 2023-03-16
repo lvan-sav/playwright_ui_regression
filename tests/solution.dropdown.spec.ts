@@ -7,12 +7,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
     
     await solutionPage.goto('security')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 12; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -21,12 +21,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
     
     await solutionPage.goto('enterpriseRisk')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -35,12 +35,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('thirdPartyRisk')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 6; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -49,12 +49,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('auditControl')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -63,12 +63,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('policyManagment')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 6; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -77,12 +77,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('regManagment')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 6; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -91,12 +91,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('dataPrivacy')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 6; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -105,12 +105,12 @@ test.describe('Solution dropdown', () => {
     const solutionPage = new SolutionPage(page)
 
     await solutionPage.goto('businessManagment')
-    await page.waitForTimeout(3000)
+    await page.waitForLoadState('networkidle')
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 5; i++) {
       await solutionPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
+      await page.waitForLoadState('networkidle')
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
