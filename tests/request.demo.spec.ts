@@ -7,17 +7,17 @@ test.describe('Request about Demo page', () => {
       const reqDemoPage = new ReqDemoPage(page)
       
       await reqDemoPage.goto()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
 
       await expect(reqDemoPage.video).toBeInViewport()
       expect(await page.screenshot()).toMatchSnapshot()
 
       await reqDemoPage.sectionHeader.scrollIntoViewIfNeeded()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
 
       await reqDemoPage.scroll4000Px()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
 
       await expect(reqDemoPage.reqDemoBtn).toBeInViewport()
       expect(await page.screenshot()).toMatchSnapshot()

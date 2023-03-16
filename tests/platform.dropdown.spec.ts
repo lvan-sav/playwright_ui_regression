@@ -7,12 +7,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
     
     await platformPage.goto()
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 5; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -21,12 +21,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
 
     await platformPage.goto('features')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 6; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -35,12 +35,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
     
     await platformPage.goto('services')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 4; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -49,12 +49,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('pricing')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -63,12 +63,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('reporting')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 4; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -77,12 +77,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('riskQuont')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -91,12 +91,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('integrations')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
@@ -105,12 +105,12 @@ test.describe('Platform dropdown pages', () => {
     const platformPage = new PlatformPage(page)
   
     await platformPage.goto('exchange')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(3000)
     expect(await page.screenshot()).toMatchSnapshot()
 
     for(let i = 0; i < 7; i++) {
       await platformPage.scrollPageWidth()
-      await page.waitForTimeout(2000)
+      await page.waitForTimeout(3000)
       expect(await page.screenshot()).toMatchSnapshot()
     }
   })
