@@ -20,7 +20,11 @@ Nodejs 16^
 ### Available scripts
 
 For install browsers - `npm run pw:install`
+
 For run crossbrowsers tests - `npm run pw:test`
+
 For run on chrome browser - `npm run pw:chrome`
+
 For run on firefox browser - `npm run pw:firefox`
+
 For run on webkit browser - `npm run pw:webkit`
