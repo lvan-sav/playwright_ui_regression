@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { PlatformPage, OverviewPage } from '../pages/platform.pages'
+import { PlatformPage, OverviewPage, FeaturesPage } from '../pages/platform.pages'
 
 
 test.describe('Platform dropdown pages', () => {
@@ -28,17 +28,27 @@ test.describe('Platform dropdown pages', () => {
   })
 
   test('Match snapshots on the Features page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
+    const featuresPage = new FeaturesPage(page)
 
-    await platformPage.goto('features')
-    await page.waitForTimeout(3000)
+    await featuresPage.goto('features')
+    await featuresPage.featuresImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 6; i++) {
-      await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await featuresPage.workflowImg.scrollIntoViewIfNeeded()
+    await featuresPage.workflowImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await featuresPage.moreFeatures.scrollIntoViewIfNeeded()
+    await featuresPage.moreFeatures.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await featuresPage.reqDemoBtn.scrollIntoViewIfNeeded()
+    await featuresPage.reqDemoBtn.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await featuresPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await featuresPage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 
   test('Match snapshots on the Services page', async ({ page }) => {
