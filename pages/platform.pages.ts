@@ -3,7 +3,7 @@ import { MainPage } from "./main.page";
 
 const platformUrl = '/platform/'
 const featuresUrl = '/platform/features/'
-const servicesUrl = '/platform/pricing/'
+const servicesUrl = '/platform/services/'
 const pricingUrl = '/platform/pricing/'
 const reportingUrl = '/platform/reporting/'
 const riskQuontUrl = '/platform/risk-cloud-quantify/'
@@ -41,5 +41,12 @@ export class FeaturesPage extends PlatformPage {
   workflowImg = this.page.locator('div.odd .lazyloaded')
   moreFeatures = this.page.locator('section.cards.features')
   reqDemoBtn = this.page.locator('.mrg-t-30[href*="request-a-demo"]')
-  
+}
+
+export class ServicePage extends PlatformPage {
+  servicesImg = this.page.locator('section.hero .lazyloaded')
+  implementationIcon = this.page.locator('div.item-tile:nth-child(1) .lazyloaded')
+  reqDemoImg = this.page.locator('section#form .lazyloaded')
+  reqDemoBtn = this.page.locator('.mrg-t-30[href*="request-a-demo"]')
+
 }
