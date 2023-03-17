@@ -3,7 +3,7 @@ import { MainPage } from '../pages/main.page'
 
 
 test.describe('Main page', () => {
-  test('Match snapshots on the Main page', async ({ page }) => {
+  test.only('Match snapshots on the Main page', async ({ page }) => {
     const mainPage = new MainPage(page)
 
     await page.goto('/')
@@ -11,27 +11,29 @@ test.describe('Main page', () => {
     expect(await page.screenshot()).toMatchSnapshot()
     
     await mainPage.wantErmBtn.scrollIntoViewIfNeeded()
-    await page.waitForLoadState('networkidle')
+    await mainPage.wantErmBtn.waitFor()
+    await mainPage.ermForm.waitFor()
     await expect(mainPage.wantErmBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.wantAutoBtn.scrollIntoViewIfNeeded()
-    await page.waitForLoadState('networkidle')
+    await mainPage.ermForm.waitFor()
     expect(mainPage.wantAutoBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.firstArticle.scrollIntoViewIfNeeded()
-    await page.waitForLoadState('networkidle')
+    await mainPage.firstArticle.waitFor()
+    await mainPage.firstArticleImg.waitFor()
     expect(mainPage.firstArticle).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await mainPage.signUpBtn.scrollIntoViewIfNeeded()
-    await page.waitForLoadState('networkidle')
-    expect(mainPage.signUpBtn).toBeInViewport()
+    await mainPage.signUpForm.scrollIntoViewIfNeeded()
+    await mainPage.signUpForm.waitFor()
+    expect(mainPage.signUpForm).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await page.waitForLoadState('networkidle')
+    await mainPage.footerMenu.waitFor()
     expect(mainPage.reqDemoFooterBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
   })
