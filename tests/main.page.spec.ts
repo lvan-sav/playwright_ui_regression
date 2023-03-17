@@ -3,7 +3,7 @@ import { MainPage } from '../pages/main.page'
 
 
 test.describe('Main page', () => {
-  test.only('Match snapshots on the Main page', async ({ page }) => {
+  test('Match snapshots on the Main page', async ({ page }) => {
     const mainPage = new MainPage(page)
 
     await page.goto('/')
