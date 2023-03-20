@@ -1,13 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { 
-  PlatformPage, 
   OverviewPage, 
   FeaturesPage, 
   ServicePage, 
   PricingPage, 
   ReportingPage, 
   RiskQuontPage,
-  IntegrationsPage
+  IntegrationsPage,
+  ExchangePage
  } from '../pages/platform.pages'
 
 
@@ -213,16 +213,30 @@ test.describe('Platform dropdown pages', () => {
   })
 
   test('Match snapshot on the Risk Exchange page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
-  
-    await platformPage.goto('exchange')
-    await await page.waitForLoadState('networkidle')
+    const exchangePage = new ExchangePage(page)
+
+    await exchangePage.goto('exchange')
+    await exchangePage.exchangeVideo.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 7; i++) {
-      await platformPage.scrollPageWidth()
-      await await page.waitForLoadState('networkidle')
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await exchangePage.applicationsBlockImg.scrollIntoViewIfNeeded()
+    await exchangePage.applicationsBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await exchangePage.integrationBlockImg.scrollIntoViewIfNeeded()
+    await exchangePage.integrationBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await exchangePage.communityBlockImg.scrollIntoViewIfNeeded()
+    await exchangePage.communityBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await exchangePage.requestDemoForm.scrollIntoViewIfNeeded()
+    await exchangePage.requestDemoImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await exchangePage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await exchangePage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 })

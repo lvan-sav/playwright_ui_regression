@@ -102,3 +102,12 @@ export class IntegrationsPage extends PlatformPage {
   requestDemoForm = this.page.locator('section#form')
   requestDemoImg = this.requestDemoForm.locator('.lazyloaded')
 }
+
+export class ExchangePage extends PlatformPage {
+  exchangeVideo = this.page.locator('section.hero .lazyloaded')
+  applicationsBlockImg = this.page.locator('div.item:nth-child(1) .lazyloaded')
+  integrationBlockImg = this.page.locator('div.item:nth-child(2) .lazyloaded')
+  communityBlockImg = this.page.locator('div.item:nth-child(3) .lazyloaded')
+  requestDemoForm = this.page.locator('section#form')
+  requestDemoImg = this.requestDemoForm.locator('.lazyloaded')
+}
