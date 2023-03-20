@@ -1,5 +1,14 @@
 import { test, expect } from '@playwright/test';
-import { PlatformPage, OverviewPage, FeaturesPage, ServicePage, PricingPage, ReportingPage, RiskQuontPage } from '../pages/platform.pages'
+import { 
+  PlatformPage, 
+  OverviewPage, 
+  FeaturesPage, 
+  ServicePage, 
+  PricingPage, 
+  ReportingPage, 
+  RiskQuontPage,
+  IntegrationsPage
+ } from '../pages/platform.pages'
 
 
 test.describe('Platform dropdown pages', () => {
@@ -154,17 +163,53 @@ test.describe('Platform dropdown pages', () => {
   })
 
   test('Match snapshot on the Integrations page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
-  
-    await platformPage.goto('integrations')
-    await page.waitForTimeout(3000)
+    const integrationsPage = new IntegrationsPage(page)
+
+    await integrationsPage.goto('integrations')
+    await integrationsPage.integrationImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 7; i++) {
-      await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await integrationsPage.connectBlockImg.scrollIntoViewIfNeeded()
+    await integrationsPage.connectBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.ticketingBlockImg.scrollIntoViewIfNeeded()
+    await integrationsPage.ticketingBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.managementBlockImg.scrollIntoViewIfNeeded()
+    await integrationsPage.managementBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.dataAnalysisBlockImg.scrollIntoViewIfNeeded()
+    await integrationsPage.dataAnalysisBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.workflowsBlockImg.scrollIntoViewIfNeeded()
+    await integrationsPage.workflowsBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.workflowBlockFirstImg.scrollIntoViewIfNeeded()
+    await integrationsPage.workflowBlockFirstImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.firstArticleImg.scrollIntoViewIfNeeded()
+    await integrationsPage.firstArticleImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.firstArticlePostImg.scrollIntoViewIfNeeded()
+    await integrationsPage.firstArticlePostImg.waitFor()
+    await integrationsPage.secArticlePostImg.waitFor()
+    await integrationsPage.thirdArticlePostImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.requestDemoForm.scrollIntoViewIfNeeded()
+    await integrationsPage.requestDemoImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await integrationsPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await integrationsPage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 
   test('Match snapshot on the Risk Exchange page', async ({ page }) => {

@@ -86,3 +86,19 @@ export class RiskQuontPage extends PlatformPage {
   signMeForm = this.page.locator('#iFrameResizer0')
   signMeImg = this.page.locator('section#form img.lazyloaded')
 }
+
+export class IntegrationsPage extends PlatformPage {
+  integrationImg = this.page.locator('section.hero .lazyloaded')
+  connectBlockImg = this.page.locator('section.overview-call div.img')
+  ticketingBlockImg = this.page.locator('section.contentItems .item:nth-child(1)')
+  managementBlockImg = this.page.locator('section.contentItems .item:nth-child(2)')
+  dataAnalysisBlockImg = this.page.locator('section.contentItems .item:nth-child(3)')
+  workflowsBlockImg = this.page.locator('section.contentItems .item:nth-child(4)')
+  workflowBlockFirstImg = this.page.locator('section.subcontent .content-item:nth-child(1) .lazyloaded')
+  firstArticleImg = this.page.locator('article[id*="card"]:nth-child(1) .lazyloaded')
+  firstArticlePostImg = this.page.locator('section.posts .post:nth-child(1) .lazy')
+  secArticlePostImg = this.page.locator('section.posts .post:nth-child(2) .lazy')
+  thirdArticlePostImg = this.page.locator('section.posts .post:nth-child(3) .lazy')
+  requestDemoForm = this.page.locator('section#form')
+  requestDemoImg = this.requestDemoForm.locator('.lazyloaded')
+}
