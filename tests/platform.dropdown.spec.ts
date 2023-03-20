@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { PlatformPage, OverviewPage, FeaturesPage, ServicePage } from '../pages/platform.pages'
+import { PlatformPage, OverviewPage, FeaturesPage, ServicePage, PricingPage, ReportingPage, RiskQuontPage } from '../pages/platform.pages'
 
 
 test.describe('Platform dropdown pages', () => {
@@ -73,45 +73,84 @@ test.describe('Platform dropdown pages', () => {
   })
 
   test('Match snapshot on the Pricing page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
-  
-    await platformPage.goto('pricing')
-    await page.waitForTimeout(3000)
+    const pricingPage = new PricingPage(page)
+
+    await pricingPage.goto('pricing')
+    await pricingPage.pricingSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 7; i++) {
-      await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await pricingPage.appBlockIcon.scrollIntoViewIfNeeded()
+    await pricingPage.appBlockIcon.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await pricingPage.testimonialBlock.scrollIntoViewIfNeeded()
+    await pricingPage.testimonalImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await pricingPage.faqBlock.scrollIntoViewIfNeeded()
+    await pricingPage.faqBlock.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await pricingPage.customPriceBotForm.scrollIntoViewIfNeeded()
+    await pricingPage.customPriceBotForm.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await pricingPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await pricingPage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 
   test('Match snapshot on the Reporting page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
+    const reportingPage = new ReportingPage(page)
   
-    await platformPage.goto('reporting')
-    await page.waitForTimeout(3000)
+    await reportingPage.goto('reporting')
+    await reportingPage.riskImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 4; i++) {
-      await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await reportingPage.featuresFirstBlockImg.scrollIntoViewIfNeeded()
+    await reportingPage.featuresFirstBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await reportingPage.requestDemoForm.scrollIntoViewIfNeeded()
+    await reportingPage.requestDemoImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await reportingPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await reportingPage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 
   test('Match snapshot on the Risk quontity page', async ({ page }) => {
-    const platformPage = new PlatformPage(page)
-  
-    await platformPage.goto('riskQuont')
-    await page.waitForTimeout(3000)
+    const riskQuontPage = new RiskQuontPage(page)
+
+    await riskQuontPage.goto("riskQuont")
+    await riskQuontPage.riskImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    for(let i = 0; i < 7; i++) {
-      await platformPage.scrollPageWidth()
-      await page.waitForTimeout(3000)
-      expect(await page.screenshot()).toMatchSnapshot()
-    }
+    await riskQuontPage.financialImg.scrollIntoViewIfNeeded()
+    await riskQuontPage.financialImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await riskQuontPage.economicImg.scrollIntoViewIfNeeded()
+    await riskQuontPage.economicImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await riskQuontPage.strategicImg.scrollIntoViewIfNeeded()
+    await riskQuontPage.strategicImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await riskQuontPage.firstArticleBlockImg.scrollIntoViewIfNeeded()
+    await riskQuontPage.firstArticleBlockImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await riskQuontPage.signMeBlock.scrollIntoViewIfNeeded()
+    await riskQuontPage.signMeForm.waitFor()
+    await riskQuontPage.signMeImg.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
+
+    await riskQuontPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await riskQuontPage.footerMenu.waitFor()
+    expect(await page.screenshot()).toMatchSnapshot()
   })
 
   test('Match snapshot on the Integrations page', async ({ page }) => {
