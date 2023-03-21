@@ -56,3 +56,80 @@ export class SecurityPage extends SolutionPage {
   firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
   secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
 }
+
+export class EnterpriseRiskPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  contextBlockImg = this.page.locator('.item:nth-child(4) .lazyloaded')
+  financialBlockImg = this.page.locator('.item:nth-child(5) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class ThirdRiskPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  contextBlockImg = this.page.locator('.item:nth-child(4) .lazyloaded')
+  financialBlockImg = this.page.locator('.item:nth-child(5) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class CompilancePage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  contextBlockImg = this.page.locator('.item:nth-child(4) .lazyloaded')
+  financialBlockImg = this.page.locator('.item:nth-child(5) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class PolicyPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  contextBlockImg = this.page.locator('.item:nth-child(4) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class RegulatoryPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class DataPrivacyPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
+
+export class OperationalPage extends SolutionPage {
+  streamlineBlockImg = this.page.locator('.item:nth-child(1) .lazyloaded')
+  assetsBlockImg = this.page.locator('.item:nth-child(2) .lazyloaded')
+  mitigationBlockImg = this.page.locator('.item:nth-child(3) .lazyloaded')
+  firstToolboxImg = this.page.locator('section.tools .ft-1 .lazyloaded')
+  firstAppArticle = this.page.locator('section.pad-top-std article:nth-child(1)')
+  firstResourcesArticleImg = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesArticleImg = this.page.locator('section.resources article:nth-child(2) .lazy')
+}
