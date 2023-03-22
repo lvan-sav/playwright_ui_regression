@@ -20,6 +20,7 @@ export class IndustriesPage extends BasePage {
   thirdContentArticle = this.page.locator('section.maincontent .item:nth-child(4) .lazyloaded')
   firstSolutionBlock = this.page.locator('article.solution:nth-child(1) .lazyloaded')
   firstResourcesBlock = this.page.locator('section.resources article:nth-child(1) .lazy')
+  secResourcesBlock = this.page.locator('section.resources article:nth-child(2) .lazy')
   infoBlock = this.page.locator('section.offset-top')
 
   async goto(page: 

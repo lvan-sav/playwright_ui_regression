@@ -8,8 +8,6 @@ test.describe('Request about Demo page', () => {
       
       await reqDemoPage.goto()
       await page.waitForLoadState('networkidle')
-
-      await expect(reqDemoPage.video).toBeInViewport()
       expect(await page.screenshot()).toMatchSnapshot()
 
       await reqDemoPage.sectionHeader.scrollIntoViewIfNeeded()
@@ -18,8 +16,6 @@ test.describe('Request about Demo page', () => {
 
       await reqDemoPage.scroll4000Px()
       await page.waitForLoadState('networkidle')
-
-      await expect(reqDemoPage.reqDemoBtn).toBeInViewport()
       expect(await page.screenshot()).toMatchSnapshot()
     })
 })

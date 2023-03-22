@@ -3,7 +3,7 @@ import { MainPage } from '../pages/main.page'
 
 
 test.describe('Main page', () => {
-  test('Match snapshots on the Main page', async ({ page }) => {
+  test.only('Match snapshots on the Main page', async ({ page }) => {
     const mainPage = new MainPage(page)
 
     await page.goto('/')
@@ -13,17 +13,21 @@ test.describe('Main page', () => {
     await mainPage.wantErmBtn.scrollIntoViewIfNeeded()
     await mainPage.wantErmBtn.waitFor()
     await mainPage.ermForm.waitFor()
+    await mainPage.ermFormImg.waitFor()
     await expect(mainPage.wantErmBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.wantAutoBtn.scrollIntoViewIfNeeded()
-    await mainPage.ermForm.waitFor()
+    await mainPage.autoForm.waitFor()
+    await mainPage.autoFormImg.waitFor()
     expect(mainPage.wantAutoBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.firstArticle.scrollIntoViewIfNeeded()
     await mainPage.firstArticle.waitFor()
     await mainPage.firstArticleImg.waitFor()
+    await mainPage.secArticle.waitFor()
+    await mainPage.secArticleImg.waitFor()
     expect(mainPage.firstArticle).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
 

@@ -61,6 +61,7 @@ test.describe('Industries pages', () => {
 
     await softwarePage.firstResourcesBlock.scrollIntoViewIfNeeded()
     await softwarePage.firstResourcesBlock.waitFor()
+    await softwarePage.secResourcesBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
     
     await softwarePage.lastForm.scrollIntoViewIfNeeded()
@@ -98,6 +99,7 @@ test.describe('Industries pages', () => {
 
     await finTechPage.firstResourcesBlock.scrollIntoViewIfNeeded()
     await finTechPage.firstResourcesBlock.waitFor()
+    await finTechPage.secResourcesBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
     
     await finTechPage.lastForm.scrollIntoViewIfNeeded()
@@ -135,6 +137,7 @@ test.describe('Industries pages', () => {
 
     await telecomPage.firstResourcesBlock.scrollIntoViewIfNeeded()
     await telecomPage.firstResourcesBlock.waitFor()
+    await telecomPage.secResourcesBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
     
     await telecomPage.lastForm.scrollIntoViewIfNeeded()
@@ -172,6 +175,7 @@ test.describe('Industries pages', () => {
 
     await bankingPage.firstResourcesBlock.scrollIntoViewIfNeeded()
     await bankingPage.firstResourcesBlock.waitFor()
+    await bankingPage.secResourcesBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
     
     await bankingPage.lastForm.scrollIntoViewIfNeeded()
@@ -209,6 +213,7 @@ test.describe('Industries pages', () => {
 
     await insurancePage.firstResourcesBlock.scrollIntoViewIfNeeded()
     await insurancePage.firstResourcesBlock.waitFor()
+    await insurancePage.secResourcesBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
     
     await insurancePage.lastForm.scrollIntoViewIfNeeded()
