@@ -19,20 +19,16 @@ test.describe('Platform dropdown pages', () => {
     await overviewPage.welcomeImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await overviewPage.pricingArticleImg.scrollIntoViewIfNeeded()
-    await overviewPage.pricingArticleImg.waitFor()
+    await overviewPage.scrollToPricingArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await overviewPage.solutionBtn.scrollIntoViewIfNeeded()
-    await overviewPage.enterpRiskManImg.waitFor()
+    await overviewPage.scrollToRiskManagement()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await overviewPage.signUpFrame.scrollIntoViewIfNeeded()
-    await overviewPage.signUpFrame.waitFor()
+    await overviewPage.scrollToSignUpFrame()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await overviewPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await overviewPage.footerMenu.waitFor()
+    await overviewPage.scrollToFooterBtn()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -43,20 +39,16 @@ test.describe('Platform dropdown pages', () => {
     await featuresPage.featuresImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await featuresPage.workflowImg.scrollIntoViewIfNeeded()
-    await featuresPage.workflowImg.waitFor()
+    await featuresPage.scrollToWorkflowBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await featuresPage.moreFeatures.scrollIntoViewIfNeeded()
-    await featuresPage.moreFeatures.waitFor()
+    await featuresPage.scrollToMoreFeaturesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await featuresPage.reqDemoBtn.scrollIntoViewIfNeeded()
-    await featuresPage.reqDemoBtn.waitFor()
+    await featuresPage.scrollToReqdemo()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await featuresPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await featuresPage.footerMenu.waitFor()
+    await featuresPage.scrollToFooterBtn()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -67,17 +59,13 @@ test.describe('Platform dropdown pages', () => {
     await servicesPage.servicesImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await servicesPage.implementationIcon.scrollIntoViewIfNeeded()
-    await servicesPage.implementationIcon.waitFor()
+    await servicesPage.scrollToImplementStateBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await servicesPage.reqDemoBtn.scrollIntoViewIfNeeded()
-    await servicesPage.reqDemoImg.waitFor()
-    await servicesPage.reqDemoBtn.waitFor()
+    await servicesPage.scrollToReqDemo()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await servicesPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await servicesPage.footerMenu.waitFor()
+    await servicesPage.scrollToFooterBtn()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -88,24 +76,19 @@ test.describe('Platform dropdown pages', () => {
     await pricingPage.pricingSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await pricingPage.appBlockIcon.scrollIntoViewIfNeeded()
-    await pricingPage.appBlockIcon.waitFor()
+    await pricingPage.scrollToAppBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await pricingPage.testimonialBlock.scrollIntoViewIfNeeded()
-    await pricingPage.testimonalImg.waitFor()
+    await pricingPage.scrollToTestimonalBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await pricingPage.faqBlock.scrollIntoViewIfNeeded()
-    await pricingPage.faqBlock.waitFor()
+    await pricingPage.scrollToFaqBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await pricingPage.customPriceBotForm.scrollIntoViewIfNeeded()
-    await pricingPage.customPriceBotForm.waitFor()
+    await pricingPage.scrollToPriceBotForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await pricingPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await pricingPage.footerMenu.waitFor()
+    await pricingPage.scrollToFooterBtn()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -116,16 +99,13 @@ test.describe('Platform dropdown pages', () => {
     await reportingPage.riskImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await reportingPage.featuresFirstBlockImg.scrollIntoViewIfNeeded()
-    await reportingPage.featuresFirstBlockImg.waitFor()
+    await reportingPage.scrollToFeaturesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await reportingPage.requestDemoForm.scrollIntoViewIfNeeded()
-    await reportingPage.requestDemoImg.waitFor()
+    await reportingPage.scrollToReqDemoForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await reportingPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await reportingPage.footerMenu.waitFor()
+    await reportingPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -136,29 +116,22 @@ test.describe('Platform dropdown pages', () => {
     await riskQuontPage.riskImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.financialImg.scrollIntoViewIfNeeded()
-    await riskQuontPage.financialImg.waitFor()
+    await riskQuontPage.scrollToFinancialImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.economicImg.scrollIntoViewIfNeeded()
-    await riskQuontPage.economicImg.waitFor()
+    await riskQuontPage.scrollToEconomicImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.strategicImg.scrollIntoViewIfNeeded()
-    await riskQuontPage.strategicImg.waitFor()
+    await riskQuontPage.scrollToStrategicImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.firstArticleBlockImg.scrollIntoViewIfNeeded()
-    await riskQuontPage.firstArticleBlockImg.waitFor()
+    await riskQuontPage.scrollToFirstArticleBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.signMeBlock.scrollIntoViewIfNeeded()
-    await riskQuontPage.signMeForm.waitFor()
-    await riskQuontPage.signMeImg.waitFor()
+    await riskQuontPage.scrollToSignMeBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await riskQuontPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await riskQuontPage.footerMenu.waitFor()
+    await riskQuontPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -169,46 +142,34 @@ test.describe('Platform dropdown pages', () => {
     await integrationsPage.integrationImg.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.connectBlockImg.scrollIntoViewIfNeeded()
-    await integrationsPage.connectBlockImg.waitFor()
+    await integrationsPage.scrollToConnectBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.ticketingBlockImg.scrollIntoViewIfNeeded()
-    await integrationsPage.ticketingBlockImg.waitFor()
+    await integrationsPage.scrollToTicketingBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.managementBlockImg.scrollIntoViewIfNeeded()
-    await integrationsPage.managementBlockImg.waitFor()
+    await integrationsPage.scrollToManagementBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.dataAnalysisBlockImg.scrollIntoViewIfNeeded()
-    await integrationsPage.dataAnalysisBlockImg.waitFor()
+    await integrationsPage.scrollToDataAnal()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.workflowsBlockImg.scrollIntoViewIfNeeded()
-    await integrationsPage.workflowsBlockImg.waitFor()
+    await integrationsPage.scrollToWorkflowBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.workflowBlockFirstImg.scrollIntoViewIfNeeded()
-    await integrationsPage.workflowBlockFirstImg.waitFor()
+    await integrationsPage.scrollToWorkflowBlockForstImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.firstArticleImg.scrollIntoViewIfNeeded()
-    await integrationsPage.firstArticleImg.waitFor()
+    await integrationsPage.scrollToFirstArticleImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.firstArticlePostImg.scrollIntoViewIfNeeded()
-    await integrationsPage.firstArticlePostImg.waitFor()
-    await integrationsPage.secArticlePostImg.waitFor()
-    await integrationsPage.thirdArticlePostImg.waitFor()
+    await integrationsPage.scrollToArticlePost()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.requestDemoForm.scrollIntoViewIfNeeded()
-    await integrationsPage.requestDemoImg.waitFor()
+    await integrationsPage.scrollToDemoForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await integrationsPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await integrationsPage.footerMenu.waitFor()
+    await integrationsPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -219,24 +180,19 @@ test.describe('Platform dropdown pages', () => {
     await exchangePage.exchangeVideo.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await exchangePage.applicationsBlockImg.scrollIntoViewIfNeeded()
-    await exchangePage.applicationsBlockImg.waitFor()
+    await exchangePage.scrollToAppBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await exchangePage.integrationBlockImg.scrollIntoViewIfNeeded()
-    await exchangePage.integrationBlockImg.waitFor()
+    await exchangePage.scrollToIntegrationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await exchangePage.communityBlockImg.scrollIntoViewIfNeeded()
-    await exchangePage.communityBlockImg.waitFor()
+    await exchangePage.scrollToCommunityBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await exchangePage.requestDemoForm.scrollIntoViewIfNeeded()
-    await exchangePage.requestDemoImg.waitFor()
+    await exchangePage.scrollToDemoForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await exchangePage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await exchangePage.footerMenu.waitFor()
+    await exchangePage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 })

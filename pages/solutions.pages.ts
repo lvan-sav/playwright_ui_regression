@@ -52,6 +52,46 @@ export class SolutionPage extends BasePage {
 
     await this.page.goto(pages[page])
   }
+
+  async scrollToStreamlineBlockImg() {
+    await this.scrollToElem(this.streamlineBlockImg)
+  }
+
+  async scrollToAssetsBlockImg() {
+    await this.scrollToElem(this.assetsBlockImg)
+  }
+
+  async scrollToMitigationBlock() {
+    await this.scrollToElem(this.mitigationBlockImg)
+  }
+
+  async scrollToContextBlock() {
+    await this.scrollToElem(this.contextBlockImg)
+  }
+
+  async scrollToFinancialBlock() {
+    await this.scrollToElem(this.financialBlockImg)
+  }
+
+  async scrollToFirstToolbox() {
+    await this.scrollToElem(this.firstToolboxImg)
+  }
+
+  async scrollToFirstAppArticle() {
+    await this.scrollToElem(this.firstAppArticle)
+  }
+
+  async scrollToResourcesArticle() {
+    await this.scrollToElems([ this.firstResourcesArticleImg, this.secResourcesArticleImg ])
+  }
+
+  async scrollToLastForm() {
+    await this.scrollToElem(this.lastForm)
+  }
+
+  async scrollToFooter() {
+    await this.scrollToElems([ this.reqDemoFooterBtn, this.footerMenu ])
+  }
 }
 
 export class SecurityPage extends SolutionPage {}

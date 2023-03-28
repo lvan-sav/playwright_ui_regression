@@ -42,6 +42,34 @@ export class IndustriesPage extends BasePage {
 
     await this.page.goto(pages[page])
   }
+
+  async scrollToLastForm() {
+    await this.scrollToElems([ this.lastForm, this.lastFormImg ])
+  }
+
+  async scrollToFooter() {
+    await this.scrollToElems([ this.reqDemoFooterBtn, this.footerMenu ])
+  }
+
+  async scrollToContentArticle() {
+    await this.scrollToElem(this.firstContentArticle)
+  }
+
+  async scrollToSecContentArticle() {
+    await this.scrollToElem(this.secContentArticle)
+  }
+
+  async scrollToThirdContentArticle() {
+    await this.scrollToElem(this.thirdContentArticle)
+  }
+
+  async scrollToFirstSolutionBlock() {
+    await this.scrollToElem(this.firstSolutionBlock)
+  }
+
+  async scrollToResourcesBlock() {
+    await this.scrollToElems([ this.firstResourcesBlock, this.secResourcesBlock ])
+  }
 }
 
 export class IndustriesOwerviewPage extends IndustriesPage {
@@ -49,6 +77,14 @@ export class IndustriesOwerviewPage extends IndustriesPage {
   finTechArticle = this.page.locator('article.industry:nth-child(2) .lazy')
   hospitalsArticle = this.page.locator('article.industry:nth-child(3) .lazy')
   investimentArticle = this.page.locator('article.industry:nth-child(7) .lazy')
+
+  async scrollToSoftwareArticle() {
+    await this.scrollToElem(this.softwareArticle)
+  }
+
+  async scrollToInvestimentArticle() {
+    await this.scrollToElem(this.investimentArticle)
+  }
 }
 
 export class SoftwarePage extends IndustriesPage {}

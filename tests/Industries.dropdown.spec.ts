@@ -19,20 +19,16 @@ test.describe('Industries pages', () => {
     await industriesPage.hospitalsArticle.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await industriesPage.softwareArticle.scrollIntoViewIfNeeded()
-    await industriesPage.softwareArticle.waitFor()
+    await industriesPage.scrollToSoftwareArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await industriesPage.investimentArticle.scrollIntoViewIfNeeded()
-    await industriesPage.investimentArticle.waitFor()
+    await industriesPage.scrollToInvestimentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await industriesPage.lastForm.scrollIntoViewIfNeeded()
-    await industriesPage.lastFormImg.waitFor()
+    await industriesPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await industriesPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await industriesPage.footerMenu.waitFor()
+    await industriesPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -43,33 +39,25 @@ test.describe('Industries pages', () => {
     await softwarePage.pageTitle.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.firstContentArticle.scrollIntoViewIfNeeded()
-    await softwarePage.firstContentArticle.waitFor()
+    await softwarePage.scrollToContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.secContentArticle.scrollIntoViewIfNeeded()
-    await softwarePage.secContentArticle.waitFor()
+    await softwarePage.scrollToSecContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.thirdContentArticle.scrollIntoViewIfNeeded()
-    await softwarePage.thirdContentArticle.waitFor()
+    await softwarePage.scrollToThirdContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.firstSolutionBlock.scrollIntoViewIfNeeded()
-    await softwarePage.firstSolutionBlock.waitFor()
+    await softwarePage.scrollToFirstSolutionBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.firstResourcesBlock.scrollIntoViewIfNeeded()
-    await softwarePage.firstResourcesBlock.waitFor()
-    await softwarePage.secResourcesBlock.waitFor()
+    await softwarePage.scrollToResourcesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
     
-    await softwarePage.lastForm.scrollIntoViewIfNeeded()
-    await softwarePage.lastFormImg.waitFor()
+    await softwarePage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await softwarePage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await softwarePage.footerMenu.waitFor()
+    await softwarePage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -81,33 +69,25 @@ test.describe('Industries pages', () => {
     await finTechPage.infoBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.firstContentArticle.scrollIntoViewIfNeeded()
-    await finTechPage.firstContentArticle.waitFor()
+    await finTechPage.scrollToContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.secContentArticle.scrollIntoViewIfNeeded()
-    await finTechPage.secContentArticle.waitFor()
+    await finTechPage.scrollToSecContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.thirdContentArticle.scrollIntoViewIfNeeded()
-    await finTechPage.thirdContentArticle.waitFor()
+    await finTechPage.scrollToThirdContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.firstSolutionBlock.scrollIntoViewIfNeeded()
-    await finTechPage.firstSolutionBlock.waitFor()
+    await finTechPage.scrollToFirstSolutionBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.firstResourcesBlock.scrollIntoViewIfNeeded()
-    await finTechPage.firstResourcesBlock.waitFor()
-    await finTechPage.secResourcesBlock.waitFor()
+    await finTechPage.scrollToResourcesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
     
-    await finTechPage.lastForm.scrollIntoViewIfNeeded()
-    await finTechPage.lastFormImg.waitFor()
+    await finTechPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await finTechPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await finTechPage.footerMenu.waitFor()
+    await finTechPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -119,33 +99,25 @@ test.describe('Industries pages', () => {
     await telecomPage.infoBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.firstContentArticle.scrollIntoViewIfNeeded()
-    await telecomPage.firstContentArticle.waitFor()
+    await telecomPage.scrollToContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.secContentArticle.scrollIntoViewIfNeeded()
-    await telecomPage.secContentArticle.waitFor()
+    await telecomPage.scrollToSecContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.thirdContentArticle.scrollIntoViewIfNeeded()
-    await telecomPage.thirdContentArticle.waitFor()
+    await telecomPage.scrollToThirdContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.firstSolutionBlock.scrollIntoViewIfNeeded()
-    await telecomPage.firstSolutionBlock.waitFor()
+    await telecomPage.scrollToFirstSolutionBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.firstResourcesBlock.scrollIntoViewIfNeeded()
-    await telecomPage.firstResourcesBlock.waitFor()
-    await telecomPage.secResourcesBlock.waitFor()
+    await telecomPage.scrollToResourcesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
     
-    await telecomPage.lastForm.scrollIntoViewIfNeeded()
-    await telecomPage.lastFormImg.waitFor()
+    await telecomPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await telecomPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await telecomPage.footerMenu.waitFor()
+    await telecomPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -157,33 +129,25 @@ test.describe('Industries pages', () => {
     await bankingPage.infoBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.firstContentArticle.scrollIntoViewIfNeeded()
-    await bankingPage.firstContentArticle.waitFor()
+    await bankingPage.scrollToContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.secContentArticle.scrollIntoViewIfNeeded()
-    await bankingPage.secContentArticle.waitFor()
+    await bankingPage.scrollToSecContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.thirdContentArticle.scrollIntoViewIfNeeded()
-    await bankingPage.thirdContentArticle.waitFor()
+    await bankingPage.scrollToThirdContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.firstSolutionBlock.scrollIntoViewIfNeeded()
-    await bankingPage.firstSolutionBlock.waitFor()
+    await bankingPage.scrollToFirstSolutionBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.firstResourcesBlock.scrollIntoViewIfNeeded()
-    await bankingPage.firstResourcesBlock.waitFor()
-    await bankingPage.secResourcesBlock.waitFor()
+    await bankingPage.scrollToResourcesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
     
-    await bankingPage.lastForm.scrollIntoViewIfNeeded()
-    await bankingPage.lastFormImg.waitFor()
+    await bankingPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await bankingPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await bankingPage.footerMenu.waitFor()
+    await bankingPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -195,33 +159,25 @@ test.describe('Industries pages', () => {
     await insurancePage.infoBlock.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.firstContentArticle.scrollIntoViewIfNeeded()
-    await insurancePage.firstContentArticle.waitFor()
+    await insurancePage.scrollToContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.secContentArticle.scrollIntoViewIfNeeded()
-    await insurancePage.secContentArticle.waitFor()
+    await insurancePage.scrollToSecContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.thirdContentArticle.scrollIntoViewIfNeeded()
-    await insurancePage.thirdContentArticle.waitFor()
+    await insurancePage.scrollToThirdContentArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.firstSolutionBlock.scrollIntoViewIfNeeded()
-    await insurancePage.firstSolutionBlock.waitFor()
+    await insurancePage.scrollToFirstSolutionBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.firstResourcesBlock.scrollIntoViewIfNeeded()
-    await insurancePage.firstResourcesBlock.waitFor()
-    await insurancePage.secResourcesBlock.waitFor()
+    await insurancePage.scrollToResourcesBlock()
     expect(await page.screenshot()).toMatchSnapshot()
     
-    await insurancePage.lastForm.scrollIntoViewIfNeeded()
-    await insurancePage.lastFormImg.waitFor()
+    await insurancePage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await insurancePage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await insurancePage.footerMenu.waitFor()
+    await insurancePage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 })

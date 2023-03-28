@@ -15,4 +15,16 @@ export class BasePage {
     const { width } = size
     await this.page.mouse.wheel(0, width)
   }
+
+  async scrollToElem(locator: Locator) {
+    await locator.scrollIntoViewIfNeeded()
+    await locator.waitFor()
+  }
+
+  async scrollToElems(locators: Locator[]) {
+    await locators[0].scrollIntoViewIfNeeded()
+    locators.forEach(async locator => {
+      await locator.waitFor()
+    })
+  }
 }

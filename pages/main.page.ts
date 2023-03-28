@@ -29,4 +29,30 @@ export class MainPage extends BasePage {
   signUpFrame = this.page.locator(signUpFrameLoc)
   reqDemoFooterBtn = this.page.locator(reqDemoFooterBtnLoc)
   footerMenu = this.page.locator(footerMenuLoc)
+
+  async scrollToErmForm() {
+    await this.scrollToElems([this.wantErmBtn, this.ermForm, this.ermFormImg])
+  }
+
+  async scrollToAutoForm() {
+    await this.scrollToElems([this.wantAutoBtn, this.autoForm, this.autoFormImg])
+  }
+
+  async scrollToArticleBlock() {
+    await this.scrollToElems([
+      this.firstArticle,
+      this.firstArticleImg,
+      this.secArticle,
+      this.secArticleImg
+    ])
+  }
+
+  async scrollToSignUpForm() {
+    await this.scrollToElem(this.signUpForm)
+  }
+
+  async scrollToFooter() {
+    await this.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await this.footerMenu.waitFor()
+  }
 }
