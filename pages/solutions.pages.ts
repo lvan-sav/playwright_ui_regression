@@ -90,7 +90,7 @@ export class SolutionPage extends BasePage {
   }
 
   async scrollToFooter() {
-    await this.scrollToElems([ this.reqDemoFooterBtn, this.footerMenu ])
+    await this.scrollToElem(this.footerMenu)
   }
 }
 

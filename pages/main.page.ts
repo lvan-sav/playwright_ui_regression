@@ -52,7 +52,7 @@ export class MainPage extends BasePage {
   }
 
   async scrollToFooter() {
-    await this.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await this.footerMenu.scrollIntoViewIfNeeded()
     await this.footerMenu.waitFor()
   }
 }

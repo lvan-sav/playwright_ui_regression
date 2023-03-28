@@ -36,7 +36,7 @@ export class PlatformPage extends MainPage {
   }
 
   async scrollToFooterBtn() {
-    await this.reqDemoFooterBtn.scrollIntoViewIfNeeded()
+    await this.footerMenu.scrollIntoViewIfNeeded()
     await this.footerMenu.waitFor()
   }
 }
