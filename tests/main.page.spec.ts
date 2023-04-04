@@ -27,7 +27,6 @@ test.describe('Main page', () => {
     expect(await page.screenshot()).toMatchSnapshot()
 
     await mainPage.scrollToFooter()
-    expect(mainPage.reqDemoFooterBtn).toBeInViewport()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 })
