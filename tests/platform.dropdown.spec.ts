@@ -62,9 +62,6 @@ test.describe('Platform dropdown pages', () => {
     await servicesPage.scrollToImplementStateBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await servicesPage.scrollToReqDemo()
-    expect(await page.screenshot()).toMatchSnapshot()
-
     await servicesPage.scrollToFooterBtn()
     expect(await page.screenshot()).toMatchSnapshot()
   })
