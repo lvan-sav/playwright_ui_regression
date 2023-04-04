@@ -95,45 +95,34 @@ test.describe('Solution dropdown', () => {
     await thirdRiskPage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.streamlineBlockImg.waitFor()
+    await thirdRiskPage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.assetsBlockImg.waitFor()
+    await thirdRiskPage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.mitigationBlockImg.waitFor()
+    await thirdRiskPage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.contextBlockImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.contextBlockImg.waitFor()
+    await thirdRiskPage.scrollToContextBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.financialBlockImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.financialBlockImg.waitFor()
+    await thirdRiskPage.scrollToFinancialBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.firstToolboxImg.waitFor()
+    await thirdRiskPage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.firstAppArticle.scrollIntoViewIfNeeded()
-    await thirdRiskPage.firstAppArticle.waitFor()
+    await thirdRiskPage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await thirdRiskPage.firstResourcesArticleImg.waitFor()
-    await thirdRiskPage.secResourcesArticleImg.waitFor()
+    await thirdRiskPage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.lastForm.scrollIntoViewIfNeeded()
-    await thirdRiskPage.lastFormImg.waitFor()
+    await thirdRiskPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await thirdRiskPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await thirdRiskPage.footerMenu.waitFor()
+    await thirdRiskPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -144,45 +133,34 @@ test.describe('Solution dropdown', () => {
     await complicatePage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await complicatePage.streamlineBlockImg.waitFor()
+    await complicatePage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await complicatePage.assetsBlockImg.waitFor()
+    await complicatePage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await complicatePage.mitigationBlockImg.waitFor()
+    await complicatePage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.contextBlockImg.scrollIntoViewIfNeeded()
-    await complicatePage.contextBlockImg.waitFor()
+    await complicatePage.scrollToContextBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.financialBlockImg.scrollIntoViewIfNeeded()
-    await complicatePage.financialBlockImg.waitFor()
+    await complicatePage.scrollToFinancialBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await complicatePage.firstToolboxImg.waitFor()
+    await complicatePage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.firstAppArticle.scrollIntoViewIfNeeded()
-    await complicatePage.firstAppArticle.waitFor()
+    await complicatePage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await complicatePage.firstResourcesArticleImg.waitFor()
-    await complicatePage.secResourcesArticleImg.waitFor()
+    await complicatePage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.lastForm.scrollIntoViewIfNeeded()
-    await complicatePage.lastFormImg.waitFor()
+    await complicatePage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await complicatePage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await complicatePage.footerMenu.waitFor()
+    await complicatePage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -193,41 +171,31 @@ test.describe('Solution dropdown', () => {
     await policyPage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await policyPage.streamlineBlockImg.waitFor()
+    await policyPage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await policyPage.assetsBlockImg.waitFor()
+    await policyPage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await policyPage.mitigationBlockImg.waitFor()
+    await policyPage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.contextBlockImg.scrollIntoViewIfNeeded()
-    await policyPage.contextBlockImg.waitFor()
+    await policyPage.scrollToContextBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await policyPage.firstToolboxImg.waitFor()
+    await policyPage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.firstAppArticle.scrollIntoViewIfNeeded()
-    await policyPage.firstAppArticle.waitFor()
+    await policyPage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await policyPage.firstResourcesArticleImg.waitFor()
-    await policyPage.secResourcesArticleImg.waitFor()
+    await policyPage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.lastForm.scrollIntoViewIfNeeded()
-    await policyPage.lastFormImg.waitFor()
+    await policyPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await policyPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await policyPage.footerMenu.waitFor()
+    await policyPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -238,37 +206,28 @@ test.describe('Solution dropdown', () => {
     await regulatoryPage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await regulatoryPage.streamlineBlockImg.waitFor()
+    await regulatoryPage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await regulatoryPage.assetsBlockImg.waitFor()
+    await regulatoryPage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await regulatoryPage.mitigationBlockImg.waitFor()
+    await regulatoryPage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await regulatoryPage.firstToolboxImg.waitFor()
+    await regulatoryPage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.firstAppArticle.scrollIntoViewIfNeeded()
-    await regulatoryPage.firstAppArticle.waitFor()
+    await regulatoryPage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await regulatoryPage.firstResourcesArticleImg.waitFor()
-    await regulatoryPage.secResourcesArticleImg.waitFor()
+    await regulatoryPage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.lastForm.scrollIntoViewIfNeeded()
-    await regulatoryPage.lastFormImg.waitFor()
+    await regulatoryPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await regulatoryPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await regulatoryPage.footerMenu.waitFor()
+    await regulatoryPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -279,37 +238,28 @@ test.describe('Solution dropdown', () => {
     await dataPrivacyPage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.streamlineBlockImg.waitFor()
+    await dataPrivacyPage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.assetsBlockImg.waitFor()
+    await dataPrivacyPage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.mitigationBlockImg.waitFor()
+    await dataPrivacyPage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.firstToolboxImg.waitFor()
+    await dataPrivacyPage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.firstAppArticle.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.firstAppArticle.waitFor()
+    await dataPrivacyPage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.firstResourcesArticleImg.waitFor()
-    await dataPrivacyPage.secResourcesArticleImg.waitFor()
+    await dataPrivacyPage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.lastForm.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.lastFormImg.waitFor()
+    await dataPrivacyPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await dataPrivacyPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await dataPrivacyPage.footerMenu.waitFor()
+    await dataPrivacyPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 
@@ -320,37 +270,28 @@ test.describe('Solution dropdown', () => {
     await operationaPage.firstSection.waitFor()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.streamlineBlockImg.scrollIntoViewIfNeeded()
-    await operationaPage.streamlineBlockImg.waitFor()
+    await operationaPage.scrollToStreamlineBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.assetsBlockImg.scrollIntoViewIfNeeded()
-    await operationaPage.assetsBlockImg.waitFor()
+    await operationaPage.scrollToAssetsBlockImg()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.mitigationBlockImg.scrollIntoViewIfNeeded()
-    await operationaPage.mitigationBlockImg.waitFor()
+    await operationaPage.scrollToMitigationBlock()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.firstToolboxImg.scrollIntoViewIfNeeded()
-    await operationaPage.firstToolboxImg.waitFor()
+    await operationaPage.scrollToFirstToolbox()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.firstAppArticle.scrollIntoViewIfNeeded()
-    await operationaPage.firstAppArticle.waitFor()
+    await operationaPage.scrollToFirstAppArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.firstResourcesArticleImg.scrollIntoViewIfNeeded()
-    await operationaPage.firstResourcesArticleImg.waitFor()
-    await operationaPage.secResourcesArticleImg.waitFor()
+    await operationaPage.scrollToResourcesArticle()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.lastForm.scrollIntoViewIfNeeded()
-    await operationaPage.lastFormImg.waitFor()
+    await operationaPage.scrollToLastForm()
     expect(await page.screenshot()).toMatchSnapshot()
 
-    await operationaPage.reqDemoFooterBtn.scrollIntoViewIfNeeded()
-    await operationaPage.footerMenu.waitFor()
+    await operationaPage.scrollToFooter()
     expect(await page.screenshot()).toMatchSnapshot()
   })
 })
