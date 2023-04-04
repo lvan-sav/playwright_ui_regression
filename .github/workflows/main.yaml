@@ -23,7 +23,7 @@ jobs:
       run: npm run pw:install
     
     - name: Run tests
-      run: npm run pw:test
+      run: npm run pw:chrome
     
     - name: Upload report
       if: always()
