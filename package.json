@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pw:test": "playwright test --config=config/playwright.config.ts",
-    "pw:chrome": "playwright test --config=config/chrome.config.ts",
+    "pw:test": "playwright test --config=config/playwright.config.ts --workers 4",
+    "pw:chrome": "playwright test --config=config/chrome.config.ts --workers 4",
     "pw:firefox":"playwright test --config=config/firefox.config.ts",
     "pw:webkit":"playwright test --config=config/webkit.config.ts",
     "pw:install": "npx playwright install --with-deps && npx playwright install msedge"
